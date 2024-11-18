@@ -41,3 +41,7 @@ Na rota **'/sobremim'**, a estrutura a ser renderizada é:
 -`useParams()` : Um hook exclusivo do react router, assim como o `useLocation()`, que permite acessar os parâmetros da rota atual, que é bem útil quando temos rotas dinâmicas onde parte da URL é usada para identificar um recurso específico.
 
 EX: Quando definimos uma rota dinâmica, como "/posts/:id", o `useParams()` extrai o valor do parâmetro 'id' da URL. Nesse contexto, esse hook permite que acessamos o componente `Post` correto, existente no arquivo **posts.json**.
+
+-`useNavigate()` : Exclusivo do React Router também, esse hook permite a navegação entre as páginas.
+
+PS: Ao utilizar o parâmetro **-1** na constante que armazena esse hook, você volta na página anterior.
