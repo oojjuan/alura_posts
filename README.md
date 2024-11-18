@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Projeto Teste / React Router DOM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi criado com o intuito de aprender a como utilizar o 'react-router-dom', uma blibioteca do React que permite gerenciar as rotas nas suas aplicações.
 
-## Available Scripts
+PS: O projeto foi criado com base em um curso da Alura, "React: Desenvolvendo em React Router com JavaScript"
 
-In the project directory, you can run:
+## Infos sobre a utilização do REACT-ROUTER-DOM
+<Routes> : Funciona como uma lista para armazenar os pathnames que serão utilizados.
 
-### `npm start`
+<Route> : Item dentro de "<Routes>" que carrega o que for desejado quando o pathname da página for o mesmo que a propriedade fornecida dentro de Route.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+EX: <Route path="/" element={<Inicio />}>
+Caso a path seja padrão, carregar o componente <Inicio />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<Route path="*"> : Caso o pathname não seja o mesmo de nenhuma Route, renderiza esse Route, que funciona como um coringa (Geralmente utilizado para uma página de 'erro 404').
 
-### `npm test`
+<Link> : Ao invés de utilizar a tag <a> para funcionar como um direcionamento para outra página, utilizamos o <Link>, visto que <a> executa um refresh na página, enquanto o <Link> só carrega aquele componente que irá mudar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+useLocation() : Retorna um objeto com propriedades da página, como o pathname. Exclusivo do React Router Dom.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<NavLink> : Uma tag exclusiva da biblioteca que permite uma customização melhor dos links, utilizando parâmetros como 'isActive' e 'isPending', que identificam se o link está ativo ou não.
